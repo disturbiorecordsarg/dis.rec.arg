@@ -174,6 +174,18 @@
     .tab-btn:last-child{border-bottom:none;}
   }
 </style>
+
+<!-- PWA: permite instalar la app en el celular y generar el APK -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#181310">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW no registrado:', err));
+    });
+  }
+</script>
 </head>
 <body>
 
@@ -362,8 +374,8 @@
 <script>
   // ⚠️ CONFIGURACIÓN: completar con los datos reales del proyecto Supabase
   // (Project Settings > API). La "anon key" es pública, no es secreta.
-  const SUPABASE_URL = 'https://TU-PROYECTO.supabase.co';
-  const SUPABASE_ANON_KEY = 'TU-ANON-KEY';
+  const SUPABASE_URL = 'https://blekbpmatrldjtvthkcb.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsZWticG1hdHJsZGp0dnRoa2NiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2NjM5NzIsImV4cCI6MjEwMjIzOTk3Mn0.-J4Mrcq74JaC3Q9abRvzd8We50TlvL8WzkT8kG5kTIw';
   const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   // ---------- Estado en memoria (se llena consultando la base) ----------
