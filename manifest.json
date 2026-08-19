@@ -1,6 +1,7 @@
 {
   "name": "Disturbio Records — Gestión de Entradas",
   "short_name": "Disturbio Gestión",
+  "id": "/app-gestion.html",
   "description": "App de gestión de entradas y control de acceso para eventos de Disturbio Records Argentina.",
   "start_url": "/app-gestion.html",
   "scope": "/",
@@ -9,6 +10,7 @@
   "background_color": "#181310",
   "theme_color": "#181310",
   "lang": "es-AR",
+  "categories": ["events", "utilities", "business"],
   "icons": [
     {
       "src": "/icons/icon-192.png",
