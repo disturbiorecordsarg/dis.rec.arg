@@ -5,12 +5,12 @@
 // Supabase, así que este service worker NO cachea datos, solo el shell
 // de la app para que abra más rápido.
 
-const CACHE_NAME = "disturbio-gestion-v1";
+const CACHE_NAME = "disturbio-gestion-v2";
 const APP_SHELL = [
-  "./app-gestion.html",
-  "./manifest.json",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "/app-gestion.html",
+  "/manifest.json",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png"
 ];
 
 self.addEventListener("install", (event) => {
